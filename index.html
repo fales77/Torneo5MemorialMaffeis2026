@@ -5,19 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>5° Memorial Silvano Maffeis - Under 13</title>
 
-<!-- ✅ GOOGLE TAG QUI -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R07S9MN59"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0R07S9MN59');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R07S9MN59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0R07S9MN59');
+</script>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&family=Exo+2:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  
   :root {
     --blu: #1a3a6b;
     --blu-scuro: #0f2347;
@@ -49,28 +47,8 @@
     position: relative;
     overflow: hidden;
   }
-  .header::before {
-    content: '';
-    position: absolute;
-    top: -30px; right: -30px;
-    width: 180px; height: 180px;
-    background: rgba(245,197,24,0.12);
-    border-radius: 50%;
-  }
-  .header::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; left: -20px;
-    width: 120px; height: 120px;
-    background: rgba(200,16,46,0.12);
-    border-radius: 50%;
-  }
-  /* Disattiviamo temporaneamente gli effetti per non interferire con i loghi */
-.header::before,
-.header::after {
-    display: none;     /* ← Disattivati */
-}
- 
+  .header::before,
+  .header::after { display: none; }
   .header-logos {
     display: flex;
     justify-content: space-between;
@@ -83,18 +61,8 @@
     width: auto;
     filter: brightness(1.15);
   }
-  .logo-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: rgba(255,255,255,0.85);
-  }
   .header-main {
-    padding: 16px 16px 8px;		/* ridotto il padding inferiore */
+    padding: 16px 16px 8px;
     position: relative; z-index: 1;
     text-align: center;
   }
@@ -106,9 +74,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  .header-title span {
-    color: var(--oro);
-  }
+  .header-title span { color: var(--oro); }
   .header-category {
     margin-top: 10px;
     display: inline-block;
@@ -122,19 +88,19 @@
     text-transform: uppercase;
     color: var(--oro);
   }
- .header-info {
+  .header-info {
     background: rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 6px 16px;        /* ridotto */
+    padding: 6px 16px;
     font-size: 12px;
     color: rgba(255,255,255,0.8);
-    margin-top: 2px;          /* piccolo margine per non farle attaccate */
-}
+    margin-top: 2px;
+  }
 
-  /* TABS CENTRATI */
+  /* TABS */
   .tabs-wrapper {
     background: var(--blu-scuro);
     overflow-x: auto;
@@ -166,18 +132,11 @@
     white-space: nowrap;
     transition: all 0.2s;
   }
-  .tab.active {
-    color: var(--oro);
-    border-bottom-color: var(--oro);
-  }
+  .tab.active { color: var(--oro); border-bottom-color: var(--oro); }
   .tab:hover:not(.active) { color: rgba(255,255,255,0.8); }
 
   /* CONTENT */
-  .content {
-    padding: 12px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  .content { padding: 12px; max-width: 600px; margin: 0 auto; }
   .section { display: none; }
   .section.active { display: block; }
 
@@ -187,9 +146,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-  @media (max-width: 360px) {
-    .groups-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 360px) { .groups-grid { grid-template-columns: 1fr; } }
 
   /* GROUP CARD */
   .group-card {
@@ -209,9 +166,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .group-teams {
-    padding: 8px 12px;
-  }
+  .group-teams { padding: 8px 12px; }
   .group-team-name {
     font-size: 14px;
     font-weight: 700;
@@ -246,23 +201,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  .standings-letter {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--oro);
-    line-height: 1;
-  }
   .standings-table {
     width: 100%;
     border-collapse: collapse;
-  }
-  .standings-table thead tr {
-    background: var(--blu-scuro);
-  }
-  .standings-table {
     table-layout: fixed;
   }
+  .standings-table thead tr { background: var(--blu-scuro); }
   .standings-table thead th {
     font-family: 'Exo 2', sans-serif;
     font-size: 12px;
@@ -281,7 +225,7 @@
   }
   .standings-table tbody tr:last-child { border-bottom: none; }
   .standings-table tbody td {
-	font-family: 'Exo 2', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     padding: 9px 8px;
     text-align: center;
     font-size: 16px;
@@ -335,14 +279,16 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  /* MATCH CARD — usato sia in Partite che in Playoff */
   .match-card {
-    padding: 10px 12px;                    /* leggermente ridotto */
+    padding: 10px 12px;
     border-bottom: 1px solid var(--grigio-chiaro);
     display: grid;
-    grid-template-columns: 58px 1fr auto 1fr;   /* data più stretta */
+    grid-template-columns: 58px 1fr auto 1fr;
     align-items: center;
-    gap: 8px;                              /* bilanciato */
-}
+    gap: 8px;
+  }
   .match-card:last-child { border-bottom: none; }
   .match-date {
     font-size: 10px;
@@ -350,7 +296,7 @@
     color: var(--grigio-testo);
     text-align: center;
     line-height: 1.25;
-	min-width: 52px;          /* stabilità */
+    min-width: 52px;
   }
   .match-date .time {
     font-family: 'Barlow Condensed', sans-serif;
@@ -365,8 +311,8 @@
     text-transform: uppercase;
     letter-spacing: 0.3px;
     color: var(--testo-scuro);
-    line-height: 1.25;        /* riduce il rischio di acapo */
-}
+    line-height: 1.25;
+  }
   .match-team.home { text-align: right; }
   .match-team.away { text-align: left; }
   .match-score {
@@ -394,7 +340,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* PLAYOFF & FINALS */
+  /* PLAYOFF — stessa struttura match-card ma con numero e data blu */
   .phase-card {
     background: white;
     border-radius: 10px;
@@ -410,7 +356,7 @@
     gap: 10px;
   }
   .phase-header.playoff { background: linear-gradient(135deg, var(--blu-scuro), var(--blu-medio)); }
-  .phase-header.finals { background: linear-gradient(135deg, var(--rosso-scuro), var(--rosso)); }
+  .phase-header.finals  { background: linear-gradient(135deg, var(--rosso-scuro), var(--rosso)); }
   .phase-icon { font-size: 24px; }
   .phase-title {
     font-family: 'Barlow Condensed', sans-serif;
@@ -421,132 +367,86 @@
   }
   .phase-subtitle { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 1px; }
 
+  /* Riga playoff: numero | data/ora | squadra casa | punteggio | squadra ospite */
   .playoff-match {
-    padding: 10px 14px;
+    padding: 10px 12px;
     border-bottom: 1px solid var(--grigio-chiaro);
-    display: flex;
+    display: grid;
+    grid-template-columns: 28px 52px 1fr auto 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   .playoff-match:last-child { border-bottom: none; }
+
   .playoff-num {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 900;
     color: var(--blu);
-    min-width: 28px;
     text-align: center;
   }
-  .playoff-info {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .playoff-matchup {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--testo-scuro);
-    flex: 1;
-    text-align: center;
-  }
-  .playoff-datetime {
-    font-size: 11px;
-    color: var(--grigio-testo);
-    margin-top: 2px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+
+  /* data/ora nei playoff: stile badge blu su 2 righe */
   .playoff-date {
     display: flex;
     flex-direction: column;
     gap: 3px;
     flex-shrink: 0;
   }
-  .playoff-date span, .playoff-date .time {
+  .playoff-date span,
+  .playoff-date .time {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: white;
     background: var(--blu);
-    padding: 2px 7px;
+    padding: 2px 5px;
     border-radius: 3px;
     text-align: center;
     display: block;
     line-height: 1.4;
   }
+
+  /* FINALI — stessa struttura: numero | data/ora | squadra 1 | punteggio | squadra 2 */
+  .finals-match {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--grigio-chiaro);
+    display: grid;
+    grid-template-columns: 28px 52px 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+  }
+  .finals-match:last-child { border-bottom: none; }
+
+  .finals-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--rosso);
+    text-align: center;
+  }
+
   .finals-date {
     display: flex;
     flex-direction: column;
     gap: 3px;
     flex-shrink: 0;
   }
-  .finals-date span, .finals-date .time {
+  .finals-date span,
+  .finals-date .time {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: white;
     background: var(--rosso);
-    padding: 2px 7px;
+    padding: 2px 5px;
     border-radius: 3px;
     text-align: center;
     display: block;
     line-height: 1.4;
   }
-  .playoff-time-badge {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-    background: var(--blu);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
 
-  .finals-match {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--grigio-chiaro);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .finals-match:last-child { border-bottom: none; }
-  .finals-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--rosso);
-    min-width: 28px;
-    text-align: center;
-  }
-  .finals-matchup {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--testo-scuro);
-    flex: 1;
-    text-align: center;
-  }
-  .finals-datetime {
-    font-size: 11px;
-    color: var(--grigio-testo);
-    margin-top: 3px;
-    display: flex;
-    gap: 6px;
-    align-items: center;
-  }
-  .finals-time-badge {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-    background: var(--rosso);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-
+  /* NAZIONALE */
   .nazionale-banner {
     background: linear-gradient(135deg, var(--verde), #3d8a35);
     color: white;
@@ -564,11 +464,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  .nazionale-banner .desc {
-    font-size: 12px;
-    color: rgba(255,255,255,0.85);
-    margin-top: 4px;
-  }
+  .nazionale-banner .desc { font-size: 12px; color: rgba(255,255,255,0.85); margin-top: 4px; }
   .nazionale-banner .date {
     display: inline-block;
     background: rgba(255,255,255,0.2);
@@ -579,6 +475,7 @@
     margin-top: 8px;
   }
 
+  /* INFO BANNER */
   .info-banner {
     background: var(--blu-scuro);
     color: white;
@@ -602,25 +499,18 @@
 
 <div class="header">
   <div class="header-logos">
-    <!-- Logo FIGC a sinistra -->
     <img src="https://www.figc.it/logos/giovani-white.svg?w=96"
          alt="FIGC SGS Club Settore Giovanile"
          class="figc-logo">
-
-    <!-- Logo Academy Volpiano a destra -->
     <img src="https://lh3.googleusercontent.com/ZxW6TGf_bswmXdpyqikDJq10I_XA8GLFkK3WK44aGFCPgtJr5lQgHfZeZwM7HPzAtu_gjH-DhhJDLH7q4Scyp6QveTwgHMqp8noyxQ"
          alt="Academy Elite Volpiano"
          style="height: 48px; width: auto; max-width: 170px; z-index: 2; position: relative;">
   </div>
-
   <div class="header-main">
     <div class="header-title">5° Memorial<br><span>Silvano Maffeis</span></div>
     <div class="header-category">Esordienti 2° Anno · Under 13</div>
   </div>
-
-  <div class="header-info">
-    📍 Via Trento 104, Volpiano
-  </div>
+  <div class="header-info">📍 Via Trento 104, Volpiano</div>
 </div>
 
 <div class="tabs-wrapper">
@@ -692,7 +582,6 @@
         </div>
       </div>
     </div>
-
     <div style="margin-top:14px">
       <div class="info-banner">
         <strong>📋 FORMATO GARE</strong><br>
@@ -708,82 +597,46 @@
 
   <!-- CLASSIFICA -->
   <div class="section" id="classifica">
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone A</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Cirié</td><td class="pts-cell">3</td><td>1</td><td>1</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>Vanchiglia</td><td class="pts-cell">0</td><td>1</td><td>0</td><td>1</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>PSG</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Volpiano P.</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone B</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Rivarolese</td><td class="pts-cell">3</td><td>1</td><td>7</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>Rebaudengo</td><td class="pts-cell">0</td><td>1</td><td>0</td><td>7</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Chisola</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Pozzomaina</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone C</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Alpignano</td><td class="pts-cell">3</td><td>1</td><td>6</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>Pro Collegno</td><td class="pts-cell">0</td><td>1</td><td>0</td><td>6</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>STS</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Venaria</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone D</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Lucento</td><td class="pts-cell">3</td><td>1</td><td>2</td><td>1</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>Pianezza</td><td class="pts-cell">1</td><td>1</td><td>0</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-3">3</span>Sisport</td><td class="pts-cell">1</td><td>1</td><td>0</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-other">4</span>Vinovo S.E.</td><td class="pts-cell">0</td><td>1</td><td>1</td><td>2</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone E</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Chieri</td><td class="pts-cell">3</td><td>1</td><td>2</td><td>1</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>San Maurizio</td><td class="pts-cell">0</td><td>1</td><td>1</td><td>2</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Borgaro</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Lascaris</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-
     <div class="standings-card">
       <div class="standings-header"><div class="standings-title">Girone F</div></div>
       <table class="standings-table">
         <thead><tr><th></th><th>PT</th><th>G</th><th>GF</th><th>GS</th></tr></thead>
-        <tbody>
-          <tr class="team-row-first"><td><span class="pos-badge pos-1">1</span>Cenisia</td><td class="pts-cell">6</td><td>2</td><td>3</td><td>0</td></tr>
-          <tr><td><span class="pos-badge pos-2">2</span>CBS</td><td class="pts-cell">0</td><td>1</td><td>0</td><td>1</td></tr>
-          <tr><td><span class="pos-badge pos-3">3</span>Mirafiori</td><td class="pts-cell">0</td><td>1</td><td>0</td><td>2</td></tr>
-          <tr><td><span class="pos-badge pos-other">-</span>Virtus Acc.</td><td class="pts-cell" style="color:var(--grigio-medio)">-</td><td>-</td><td>-</td><td>-</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
   </div>
@@ -791,250 +644,64 @@
   <!-- PARTITE -->
   <div class="section" id="partite">
 
-    <!-- Girone A -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone A</div></div>
-      <div class="match-card">
-        <div class="match-date">10/05<span class="time">09:30</span></div>
-        <div class="match-team home">Vanchiglia</div>
-        <div class="match-score">0 - 1</div>
-        <div class="match-team away">Cirié</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">17/05<span class="time">16:30</span></div>
-        <div class="match-team home">Vanchiglia</div>
-        <div class="match-score">2 - 1</div>
-        <div class="match-team away">PSG</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">24/05<span class="time">10:30</span></div>
-        <div class="match-team home">Cirié</div>
-        <div class="match-score">0 - 2</div>
-        <div class="match-team away">Volpiano P.</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">30/05<span class="time">15:00</span></div>
-        <div class="match-team home">Volpiano P.</div>
-        <div class="match-score">2 - 1</div>
-        <div class="match-team away">Vanchiglia</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">30/05<span class="time">16:00</span></div>
-        <div class="match-team home">Cirié</div>
-        <div class="match-score">0 - 3</div>
-        <div class="match-team away">PSG</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">31/05<span class="time">14:00</span></div>
-        <div class="match-team home">Volpiano P.</div>
-        <div class="match-score">0 - 4</div>
-        <div class="match-team away">PSG</div>
-      </div>
+      <div class="match-card"><div class="match-date">10/05<span class="time">09:30</span></div><div class="match-team home">Vanchiglia</div><div class="match-score">0 - 1</div><div class="match-team away">Cirié</div></div>
+      <div class="match-card"><div class="match-date">17/05<span class="time">16:30</span></div><div class="match-team home">Vanchiglia</div><div class="match-score">2 - 1</div><div class="match-team away">PSG</div></div>
+      <div class="match-card"><div class="match-date">24/05<span class="time">10:30</span></div><div class="match-team home">Cirié</div><div class="match-score">0 - 2</div><div class="match-team away">Volpiano P.</div></div>
+      <div class="match-card"><div class="match-date">30/05<span class="time">15:00</span></div><div class="match-team home">Volpiano P.</div><div class="match-score">2 - 1</div><div class="match-team away">Vanchiglia</div></div>
+      <div class="match-card"><div class="match-date">30/05<span class="time">16:00</span></div><div class="match-team home">Cirié</div><div class="match-score">0 - 3</div><div class="match-team away">PSG</div></div>
+      <div class="match-card"><div class="match-date">31/05<span class="time">14:00</span></div><div class="match-team home">Volpiano P.</div><div class="match-score">0 - 4</div><div class="match-team away">PSG</div></div>
     </div>
 
-    <!-- Girone B -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone B</div></div>
-      <div class="match-card">
-        <div class="match-date">09/05<span class="time">11:00</span></div>
-        <div class="match-team home">Rivarolese</div>
-        <div class="match-score">7 - 0</div>
-        <div class="match-team away">Rebaudengo</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">10/05<span class="time">17:00</span></div>
-        <div class="match-team home">Chisola</div>
-        <div class="match-score">2 - 0</div>
-        <div class="match-team away">Pozzomaina</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">17/05<span class="time">12:30</span></div>
-        <div class="match-team home">Rebaudengo</div>
-        <div class="match-score">0 - 7</div>
-        <div class="match-team away">Chisola</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">17/05<span class="time">15:30</span></div>
-        <div class="match-team home">Pozzomaina</div>
-        <div class="match-score">6 - 0</div>
-        <div class="match-team away">Rivarolese</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">30/05<span class="time">17:00</span></div>
-        <div class="match-team home">Rivarolese</div>
-        <div class="match-score">3 - 4</div>
-        <div class="match-team away">Chisola</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">02/06<span class="time">10:00</span></div>
-        <div class="match-team home">Pozzomaina</div>
-        <div class="match-score">5 - 0</div>
-        <div class="match-team away">Rebaudengo</div>
-      </div>
+      <div class="match-card"><div class="match-date">09/05<span class="time">11:00</span></div><div class="match-team home">Rivarolese</div><div class="match-score">7 - 0</div><div class="match-team away">Rebaudengo</div></div>
+      <div class="match-card"><div class="match-date">10/05<span class="time">17:00</span></div><div class="match-team home">Chisola</div><div class="match-score">2 - 0</div><div class="match-team away">Pozzomaina</div></div>
+      <div class="match-card"><div class="match-date">17/05<span class="time">12:30</span></div><div class="match-team home">Rebaudengo</div><div class="match-score">0 - 7</div><div class="match-team away">Chisola</div></div>
+      <div class="match-card"><div class="match-date">17/05<span class="time">15:30</span></div><div class="match-team home">Pozzomaina</div><div class="match-score">6 - 0</div><div class="match-team away">Rivarolese</div></div>
+      <div class="match-card"><div class="match-date">30/05<span class="time">17:00</span></div><div class="match-team home">Rivarolese</div><div class="match-score">3 - 4</div><div class="match-team away">Chisola</div></div>
+      <div class="match-card"><div class="match-date">02/06<span class="time">10:00</span></div><div class="match-team home">Pozzomaina</div><div class="match-score">5 - 0</div><div class="match-team away">Rebaudengo</div></div>
     </div>
 
-    <!-- Girone C -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone C</div></div>
-      <div class="match-card">
-        <div class="match-date">09/05<span class="time">14:00</span></div>
-        <div class="match-team home">Alpignano</div>
-        <div class="match-score">6 - 0</div>
-        <div class="match-team away">Pro Collegno</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">16/05<span class="time">18:00</span></div>
-        <div class="match-team home">Pro Collegno</div>
-        <div class="match-score">0 - 4</div>
-        <div class="match-team away">STS</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">17/05<span class="time">10:30</span></div>
-        <div class="match-team home">Alpignano</div>
-        <div class="match-score">3 - 2</div>
-        <div class="match-team away">Venaria</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">23/05<span class="time">15:00</span></div>
-        <div class="match-team home">Venaria</div>
-        <div class="match-score">0 - 0</div>
-        <div class="match-team away">STS</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">02/06<span class="time">11:00</span></div>
-        <div class="match-team home">Venaria</div>
-        <div class="match-score">8 - 0</div>
-        <div class="match-team away">Pro Collegno</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">31/05<span class="time">10:00</span></div>
-        <div class="match-team home">STS</div>
-        <div class="match-score">0 - 3</div>
-        <div class="match-team away">Alpignano</div>
-      </div>
+      <div class="match-card"><div class="match-date">09/05<span class="time">14:00</span></div><div class="match-team home">Alpignano</div><div class="match-score">6 - 0</div><div class="match-team away">Pro Collegno</div></div>
+      <div class="match-card"><div class="match-date">16/05<span class="time">18:00</span></div><div class="match-team home">Pro Collegno</div><div class="match-score">0 - 4</div><div class="match-team away">STS</div></div>
+      <div class="match-card"><div class="match-date">17/05<span class="time">10:30</span></div><div class="match-team home">Alpignano</div><div class="match-score">3 - 2</div><div class="match-team away">Venaria</div></div>
+      <div class="match-card"><div class="match-date">23/05<span class="time">15:00</span></div><div class="match-team home">Venaria</div><div class="match-score">0 - 0</div><div class="match-team away">STS</div></div>
+      <div class="match-card"><div class="match-date">02/06<span class="time">11:00</span></div><div class="match-team home">Venaria</div><div class="match-score">8 - 0</div><div class="match-team away">Pro Collegno</div></div>
+      <div class="match-card"><div class="match-date">31/05<span class="time">10:00</span></div><div class="match-team home">STS</div><div class="match-score">0 - 3</div><div class="match-team away">Alpignano</div></div>
     </div>
 
-    <!-- Girone D -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone D</div></div>
-      <div class="match-card">
-        <div class="match-date">09/05<span class="time">10:00</span></div>
-        <div class="match-team home">Lucento</div>
-        <div class="match-score">2 - 1</div>
-        <div class="match-team away">Vinovo S.E.</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">10/05<span class="time">11:30</span></div>
-        <div class="match-team home">Sisport</div>
-        <div class="match-score">0 - 0</div>
-        <div class="match-team away">Pianezza</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">16/05<span class="time">16:00</span></div>
-        <div class="match-team home">Vinovo S.E.</div>
-        <div class="match-score">2 - 2</div>
-        <div class="match-team away">Pianezza</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">23/05<span class="time">16:00</span></div>
-        <div class="match-team home">Sisport</div>
-        <div class="match-score">6 - 1</div>
-        <div class="match-team away">Lucento</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">24/05<span class="time">11:30</span></div>
-        <div class="match-team home">Pianezza</div>
-        <div class="match-score">1 - 2</div>
-        <div class="match-team away">Lucento</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">30/05<span class="time">10:30</span></div>
-        <div class="match-team home">Vinovo S.E.</div>
-        <div class="match-score">0 - 3</div>
-        <div class="match-team away">Sisport</div>
-      </div>
+      <div class="match-card"><div class="match-date">09/05<span class="time">10:00</span></div><div class="match-team home">Lucento</div><div class="match-score">2 - 1</div><div class="match-team away">Vinovo S.E.</div></div>
+      <div class="match-card"><div class="match-date">10/05<span class="time">11:30</span></div><div class="match-team home">Sisport</div><div class="match-score">0 - 0</div><div class="match-team away">Pianezza</div></div>
+      <div class="match-card"><div class="match-date">16/05<span class="time">16:00</span></div><div class="match-team home">Vinovo S.E.</div><div class="match-score">2 - 2</div><div class="match-team away">Pianezza</div></div>
+      <div class="match-card"><div class="match-date">23/05<span class="time">16:00</span></div><div class="match-team home">Sisport</div><div class="match-score">6 - 1</div><div class="match-team away">Lucento</div></div>
+      <div class="match-card"><div class="match-date">24/05<span class="time">11:30</span></div><div class="match-team home">Pianezza</div><div class="match-score">1 - 2</div><div class="match-team away">Lucento</div></div>
+      <div class="match-card"><div class="match-date">30/05<span class="time">10:30</span></div><div class="match-team home">Vinovo S.E.</div><div class="match-score">0 - 3</div><div class="match-team away">Sisport</div></div>
     </div>
 
-    <!-- Girone E -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone E</div></div>
-      <div class="match-card">
-        <div class="match-date">10/05<span class="time">10:30</span></div>
-        <div class="match-team home">Chieri</div>
-        <div class="match-score">2 - 1</div>
-        <div class="match-team away">San Maurizio</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">16/05<span class="time">17:00</span></div>
-        <div class="match-team home">San Maurizio</div>
-        <div class="match-score">0 - 2</div>
-        <div class="match-team away">Lascaris</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">27/05<span class="time">19:30</span></div>
-        <div class="match-team home">Borgaro</div>
-        <div class="match-score">8 - 0</div>
-        <div class="match-team away">San Maurizio</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">23/05<span class="time">17:00</span></div>
-        <div class="match-team home">Lascaris</div>
-        <div class="match-score">2 - 0</div>
-        <div class="match-team away">Chieri</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">24/05<span class="time">17:00</span></div>
-        <div class="match-team home">Chieri</div>
-        <div class="match-score">0 - 2</div>
-        <div class="match-team away">Borgaro</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">30/05<span class="time">11:30</span></div><!-- CORRETTO: era 30/06 -->
-        <div class="match-team home">Lascaris</div>
-        <div class="match-score">2 - 1</div>
-        <div class="match-team away">Borgaro</div>
-      </div>
+      <div class="match-card"><div class="match-date">10/05<span class="time">10:30</span></div><div class="match-team home">Chieri</div><div class="match-score">2 - 1</div><div class="match-team away">San Maurizio</div></div>
+      <div class="match-card"><div class="match-date">16/05<span class="time">17:00</span></div><div class="match-team home">San Maurizio</div><div class="match-score">0 - 2</div><div class="match-team away">Lascaris</div></div>
+      <div class="match-card"><div class="match-date">27/05<span class="time">19:30</span></div><div class="match-team home">Borgaro</div><div class="match-score">8 - 0</div><div class="match-team away">San Maurizio</div></div>
+      <div class="match-card"><div class="match-date">23/05<span class="time">17:00</span></div><div class="match-team home">Lascaris</div><div class="match-score">2 - 0</div><div class="match-team away">Chieri</div></div>
+      <div class="match-card"><div class="match-date">24/05<span class="time">17:00</span></div><div class="match-team home">Chieri</div><div class="match-score">0 - 2</div><div class="match-team away">Borgaro</div></div>
+      <div class="match-card"><div class="match-date">30/05<span class="time">11:30</span></div><div class="match-team home">Lascaris</div><div class="match-score">2 - 1</div><div class="match-team away">Borgaro</div></div>
     </div>
 
-    <!-- Girone F -->
     <div class="matches-group">
       <div class="matches-group-header"><div class="standings-title">Girone F</div></div>
-      <div class="match-card">
-        <div class="match-date">09/05<span class="time">12:00</span></div>
-        <div class="match-team home">CBS</div>
-        <div class="match-score">0 - 1</div>
-        <div class="match-team away">Cenisia</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">10/05<span class="time">14:00</span></div>
-        <div class="match-team home">Cenisia</div>
-        <div class="match-score">2 - 0</div>
-        <div class="match-team away">Mirafiori</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">17/05<span class="time">11:30</span></div>
-        <div class="match-team home">Mirafiori</div>
-        <div class="match-score">0 - 2</div>
-        <div class="match-team away">CBS</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">23/05<span class="time">18:00</span></div>
-        <div class="match-team home">Cenisia</div>
-        <div class="match-score">8 - 1</div>
-        <div class="match-team away">Virtus Acc.</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">24/05<span class="time">18:00</span></div>
-        <div class="match-team home">Virtus Acc.</div>
-        <div class="match-score">0 - 5</div>
-        <div class="match-team away">CBS</div>
-      </div>
-      <div class="match-card">
-        <div class="match-date">31/05<span class="time">11:00</span></div>
-        <div class="match-team home">Mirafiori</div>
-        <div class="match-score">3 - 1</div>
-        <div class="match-team away">Virtus Acc.</div>
-      </div>
+      <div class="match-card"><div class="match-date">09/05<span class="time">12:00</span></div><div class="match-team home">CBS</div><div class="match-score">0 - 1</div><div class="match-team away">Cenisia</div></div>
+      <div class="match-card"><div class="match-date">10/05<span class="time">14:00</span></div><div class="match-team home">Cenisia</div><div class="match-score">2 - 0</div><div class="match-team away">Mirafiori</div></div>
+      <div class="match-card"><div class="match-date">17/05<span class="time">11:30</span></div><div class="match-team home">Mirafiori</div><div class="match-score">0 - 2</div><div class="match-team away">CBS</div></div>
+      <div class="match-card"><div class="match-date">23/05<span class="time">18:00</span></div><div class="match-team home">Cenisia</div><div class="match-score">8 - 1</div><div class="match-team away">Virtus Acc.</div></div>
+      <div class="match-card"><div class="match-date">24/05<span class="time">18:00</span></div><div class="match-team home">Virtus Acc.</div><div class="match-score">0 - 5</div><div class="match-team away">CBS</div></div>
+      <div class="match-card"><div class="match-date">31/05<span class="time">11:00</span></div><div class="match-team home">Mirafiori</div><div class="match-score">3 - 1</div><div class="match-team away">Virtus Acc.</div></div>
     </div>
 
   </div>
@@ -1053,50 +720,51 @@
         <div class="phase-icon">⚡</div>
         <div>
           <div class="phase-title">Turno Playoff</div>
-          <div class="phase-subtitle">6–7 Giugno 2026 · due tempi da 25 minuti</div>
+          <div class="phase-subtitle">5–9 Giugno 2026 · due tempi da 25 minuti</div>
         </div>
       </div>
-      <div class="playoff-match">
+      <!-- #num | data | home | score | away  — home/away popolati dal JS -->
+      <div class="playoff-match" data-home="2ª Girone A" data-away="3ª Girone F">
         <div class="playoff-num">#1</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>05/06</span><span class="time">19:30</span></div>
-          <div class="playoff-matchup">2ª Girone A — 3ª Girone F</div>
-        </div>
+        <div class="playoff-date"><span>05/06</span><span class="time">19:30</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="playoff-match">
+      <div class="playoff-match" data-home="2ª Girone B" data-away="3ª Girone E">
         <div class="playoff-num">#2</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>06/06</span><span class="time">15:00</span></div>
-          <div class="playoff-matchup">2ª Girone B — 3ª Girone E</div>
-        </div>
+        <div class="playoff-date"><span>06/06</span><span class="time">15:00</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="playoff-match">
+      <div class="playoff-match" data-home="2ª Girone C" data-away="3ª Girone D">
         <div class="playoff-num">#3</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>08/06</span><span class="time">19:30</span></div>
-          <div class="playoff-matchup">2ª Girone C — 3ª Girone D</div>
-        </div>
+        <div class="playoff-date"><span>08/06</span><span class="time">19:30</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="playoff-match">
+      <div class="playoff-match" data-home="2ª Girone D" data-away="3ª Girone C">
         <div class="playoff-num">#4</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>05/06</span><span class="time">20:30</span></div>
-          <div class="playoff-matchup">2ª Girone D — 3ª Girone C</div>
-        </div>
+        <div class="playoff-date"><span>05/06</span><span class="time">20:30</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="playoff-match">
+      <div class="playoff-match" data-home="2ª Girone E" data-away="3ª Girone B">
         <div class="playoff-num">#5</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>06/06</span><span class="time">14:00</span></div>
-          <div class="playoff-matchup">2ª Girone E — 3ª Girone B</div>
-        </div>
+        <div class="playoff-date"><span>06/06</span><span class="time">14:00</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="playoff-match">
+      <div class="playoff-match" data-home="2ª Girone F" data-away="3ª Girone A">
         <div class="playoff-num">#6</div>
-        <div class="playoff-info">
-          <div class="playoff-date"><span>09/06</span><span class="time">19:30</span></div>
-          <div class="playoff-matchup">2ª Girone F — 3ª Girone A</div>
-        </div>
+        <div class="playoff-date"><span>09/06</span><span class="time">19:30</span></div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
     </div>
 
@@ -1109,35 +777,47 @@
           <div class="phase-subtitle">13–14 Giugno 2026 · due tempi da 25 minuti</div>
         </div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone A" data-away="Vincente Playoff 4">
         <div class="finals-num">#1</div>
         <div class="finals-date"><span>13/06</span><span class="time">15:00</span></div>
-        <div class="finals-matchup">1ª Girone A — Vincente Playoff 4</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone B" data-away="Vincente Playoff 6">
         <div class="finals-num">#2</div>
         <div class="finals-date"><span>13/06</span><span class="time">16:00</span></div>
-        <div class="finals-matchup">1ª Girone B — Vincente Playoff 6</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone C" data-away="Vincente Playoff 5">
         <div class="finals-num">#3</div>
         <div class="finals-date"><span>13/06</span><span class="time">17:00</span></div>
-        <div class="finals-matchup">1ª Girone C — Vincente Playoff 5</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone D" data-away="Vincente Playoff 1">
         <div class="finals-num">#4</div>
         <div class="finals-date"><span>14/06</span><span class="time">15:00</span></div>
-        <div class="finals-matchup">1ª Girone D — Vincente Playoff 1</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone E" data-away="Vincente Playoff 3">
         <div class="finals-num">#5</div>
         <div class="finals-date"><span>14/06</span><span class="time">16:00</span></div>
-        <div class="finals-matchup">1ª Girone E — Vincente Playoff 3</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
-      <div class="finals-match">
+      <div class="finals-match" data-home="1ª Girone F" data-away="Vincente Playoff 2">
         <div class="finals-num">#6</div>
         <div class="finals-date"><span>14/06</span><span class="time">17:00</span></div>
-        <div class="finals-matchup">1ª Girone F — Vincente Playoff 2</div>
+        <div class="match-team home"></div>
+        <div class="match-score pending">vs</div>
+        <div class="match-team away"></div>
       </div>
     </div>
 
@@ -1148,230 +828,160 @@
       <div class="desc">Le 6 vincitrici delle Finali accedono alla fase nazionale</div>
       <div class="date">📅 20 – 21 Giugno 2026</div>
     </div>
-
   </div>
 
 </div>
 
 <script>
-  // ==================== LOGICA CLASSIFICHE AUTOMATICA ====================
-  function calculateStandings() {
-    const groups = {
-      'A': {}, 'B': {}, 'C': {}, 'D': {}, 'E': {}, 'F': {}
-    };
+// ==================== CALCOLO CLASSIFICHE ====================
+function calculateStandings() {
+  const groups = { A:{}, B:{}, C:{}, D:{}, E:{}, F:{} };
+  const partitePerGirone = { A:[], B:[], C:[], D:[], E:[], F:[] };
 
-    document.querySelectorAll('.matches-group').forEach(groupEl => {
-      const title = groupEl.querySelector('.standings-title').textContent.trim();
-      const groupLetter = title.replace('Girone ', '');
-      if (!groups[groupLetter]) return;
-
-      groupEl.querySelectorAll('.match-team').forEach(teamEl => {
-        const teamName = teamEl.textContent.trim();
-        if (teamName && !groups[groupLetter][teamName]) {
-          groups[groupLetter][teamName] = { pts: 0, g: 0, gf: 0, gs: 0 };
-        }
-      });
+  // Inizializza squadre
+  document.querySelectorAll('.matches-group').forEach(groupEl => {
+    const letter = groupEl.querySelector('.standings-title').textContent.replace('Girone ','').trim();
+    groupEl.querySelectorAll('.match-team').forEach(el => {
+      const name = el.textContent.trim();
+      if (name && !groups[letter][name])
+        groups[letter][name] = { pts:0, g:0, gf:0, gs:0 };
     });
+  });
 
-    const partitePerGirone = { 'A': [], 'B': [], 'C': [], 'D': [], 'E': [], 'F': [] };
+  // Leggi risultati
+  document.querySelectorAll('.matches-group .match-card').forEach(match => {
+    const home = match.querySelector('.match-team.home').textContent.trim();
+    const away = match.querySelector('.match-team.away').textContent.trim();
+    const scoreEl = match.querySelector('.match-score');
+    if (!scoreEl || scoreEl.classList.contains('pending') || scoreEl.classList.contains('rinv')) return;
+    const txt = scoreEl.textContent.trim();
+    if (!txt.includes('-')) return;
+    const [hg, ag] = txt.split('-').map(s => parseInt(s.trim()));
+    const letter = match.closest('.matches-group').querySelector('.standings-title').textContent.replace('Girone ','').trim();
+    partitePerGirone[letter].push({ home, away, hg, ag });
+    if (groups[letter][home]) { groups[letter][home].g++; groups[letter][home].gf+=hg; groups[letter][home].gs+=ag; }
+    if (groups[letter][away]) { groups[letter][away].g++; groups[letter][away].gf+=ag; groups[letter][away].gs+=hg; }
+    if (hg > ag)      { if (groups[letter][home]) groups[letter][home].pts+=3; }
+    else if (ag > hg) { if (groups[letter][away]) groups[letter][away].pts+=3; }
+    else { if (groups[letter][home]) groups[letter][home].pts+=1; if (groups[letter][away]) groups[letter][away].pts+=1; }
+  });
 
-    document.querySelectorAll('.match-card').forEach(match => {
-      const homeTeam = match.querySelector('.match-team.home').textContent.trim();
-      const awayTeam = match.querySelector('.match-team.away').textContent.trim();
-      const scoreEl = match.querySelector('.match-score');
-
-      if (!scoreEl || scoreEl.classList.contains('pending') || scoreEl.classList.contains('rinv')) return;
-
-      const scoreText = scoreEl.textContent.trim();
-      if (!scoreText.includes('-')) return;
-
-      const [homeGoals, awayGoals] = scoreText.split('-').map(s => parseInt(s.trim()));
-      const groupLetter = match.closest('.matches-group').querySelector('.standings-title').textContent.replace('Girone ', '').trim();
-
-      if (!groups[groupLetter]) return;
-
-      partitePerGirone[groupLetter].push({ home: homeTeam, away: awayTeam, homeGoals, awayGoals });
-
-      if (groups[groupLetter][homeTeam]) {
-        groups[groupLetter][homeTeam].g++;
-        groups[groupLetter][homeTeam].gf += homeGoals;
-        groups[groupLetter][homeTeam].gs += awayGoals;
-      }
-      if (groups[groupLetter][awayTeam]) {
-        groups[groupLetter][awayTeam].g++;
-        groups[groupLetter][awayTeam].gf += awayGoals;
-        groups[groupLetter][awayTeam].gs += homeGoals;
-      }
-
-      if (homeGoals > awayGoals) {
-        if (groups[groupLetter][homeTeam]) groups[groupLetter][homeTeam].pts += 3;
-      } else if (awayGoals > homeGoals) {
-        if (groups[groupLetter][awayTeam]) groups[groupLetter][awayTeam].pts += 3;
-      } else {
-        if (groups[groupLetter][homeTeam]) groups[groupLetter][homeTeam].pts += 1;
-        if (groups[groupLetter][awayTeam]) groups[groupLetter][awayTeam].pts += 1;
-      }
+  // Scontro diretto
+  function sd(letter, a, b) {
+    let pa=0, pb=0, ga=0, gb=0;
+    partitePerGirone[letter].forEach(p => {
+      if (p.home===a && p.away===b) { ga+=p.hg; gb+=p.ag; if(p.hg>p.ag) pa+=3; else if(p.ag>p.hg) pb+=3; else {pa++;pb++;} }
+      if (p.home===b && p.away===a) { gb+=p.hg; ga+=p.ag; if(p.hg>p.ag) pb+=3; else if(p.ag>p.hg) pa+=3; else {pa++;pb++;} }
     });
-
-    function scontroDisretto(lettera, teamA, teamB) {
-      const sd = { pts: { [teamA]: 0, [teamB]: 0 }, gf: { [teamA]: 0, [teamB]: 0 } };
-
-      partitePerGirone[lettera].forEach(p => {
-        if (p.home === teamA && p.away === teamB) {
-          sd.gf[teamA] += p.homeGoals;
-          sd.gf[teamB] += p.awayGoals;
-          if (p.homeGoals > p.awayGoals)      sd.pts[teamA] += 3;
-          else if (p.awayGoals > p.homeGoals) sd.pts[teamB] += 3;
-          else { sd.pts[teamA]++; sd.pts[teamB]++; }
-        } else if (p.home === teamB && p.away === teamA) {
-          sd.gf[teamB] += p.homeGoals;
-          sd.gf[teamA] += p.awayGoals;
-          if (p.homeGoals > p.awayGoals)      sd.pts[teamB] += 3;
-          else if (p.awayGoals > p.homeGoals) sd.pts[teamA] += 3;
-          else { sd.pts[teamA]++; sd.pts[teamB]++; }
-        }
-      });
-
-      if (sd.pts[teamA] !== sd.pts[teamB]) return sd.pts[teamA] > sd.pts[teamB] ? -1 : 1;
-      if (sd.gf[teamA] !== sd.gf[teamB]) return sd.gf[teamA] > sd.gf[teamB] ? -1 : 1;
-      return 0;
-    }
-
-    // 🔑 Classifiche ordinate CON scontro diretto — usate sia per tabelle che per playoff
-    const classificheOrdinate = {};
-
-    document.querySelectorAll('.standings-card').forEach(card => {
-      const titleEl = card.querySelector('.standings-title');
-      if (!titleEl) return;
-
-      const groupLetter = titleEl.textContent.replace('Girone ', '').trim();
-      const tbody = card.querySelector('tbody');
-      if (!tbody || !groups[groupLetter]) return;
-
-      const teamsArray = Object.entries(groups[groupLetter])
-        .map(([name, data]) => ({ name, ...data, diff: data.gf - data.gs }))
-        .sort((a, b) => {
-          if (b.pts !== a.pts) return b.pts - a.pts;
-          const sd = scontroDisretto(groupLetter, a.name, b.name);
-          if (sd !== 0) return sd;
-          if (b.diff !== a.diff) return b.diff - a.diff;
-          if (b.gf !== a.gf) return b.gf - a.gf;
-          return a.name.localeCompare(b.name);
-        });
-
-      // 🔑 Salva la classifica già ordinata correttamente
-      classificheOrdinate[groupLetter] = teamsArray;
-
-      tbody.innerHTML = '';
-      teamsArray.forEach((team, index) => {
-        const pos = index + 1;
-        let badgeClass = 'pos-other';
-        if (pos === 1) badgeClass = 'pos-1';
-        else if (pos === 2) badgeClass = 'pos-2';
-        else if (pos === 3) badgeClass = 'pos-3';
-
-        const row = document.createElement('tr');
-        if (pos === 1) row.classList.add('team-row-first');
-        row.innerHTML = `
-          <td><span class="pos-badge ${badgeClass}">${pos}</span>${team.name}</td>
-          <td class="pts-cell">${team.pts}</td>
-          <td>${team.g}</td>
-          <td>${team.gf}</td>
-          <td>${team.gs}</td>
-        `;
-        tbody.appendChild(row);
-      });
-    });
-
-    return classificheOrdinate; // 🔑 restituisce classifiche già ordinate con scontro diretto
+    if (pa!==pb) return pa>pb?-1:1;
+    if (ga!==gb) return ga>gb?-1:1;
+    return 0;
   }
 
-  // ==================== POPOLA PLAYOFF/FINALI CON NOMI REALI ====================
-  function popolaFasiFinali(classificheOrdinate) {
+  const classifiche = {};
 
-    const gironiCompleti = {};
-    document.querySelectorAll('.matches-group').forEach(groupEl => {
-      const groupLetter = groupEl.querySelector('.standings-title').textContent.replace('Girone ', '').trim();
-      const tutte = groupEl.querySelectorAll('.match-card');
-      const giocate = Array.from(tutte).filter(m => {
-        const score = m.querySelector('.match-score');
-        return score &&
-               !score.classList.contains('pending') &&
-               !score.classList.contains('rinv') &&
-               score.textContent.includes('-');
+  document.querySelectorAll('.standings-card').forEach(card => {
+    const letter = card.querySelector('.standings-title').textContent.replace('Girone ','').trim();
+    const tbody = card.querySelector('tbody');
+    if (!tbody || !groups[letter]) return;
+    const sorted = Object.entries(groups[letter])
+      .map(([name,d]) => ({name,...d, diff:d.gf-d.gs}))
+      .sort((a,b) => {
+        if (b.pts!==a.pts) return b.pts-a.pts;
+        const r=sd(letter,a.name,b.name); if(r!==0) return r;
+        if (b.diff!==a.diff) return b.diff-a.diff;
+        if (b.gf!==a.gf) return b.gf-a.gf;
+        return a.name.localeCompare(b.name);
       });
-      gironiCompleti[groupLetter] = giocate.length === tutte.length;
+    classifiche[letter] = sorted;
+    tbody.innerHTML = '';
+    sorted.forEach((t,i) => {
+      const pos=i+1;
+      const bc = pos===1?'pos-1':pos===2?'pos-2':pos===3?'pos-3':'pos-other';
+      const row = document.createElement('tr');
+      if (pos===1) row.classList.add('team-row-first');
+      row.innerHTML = `<td><span class="pos-badge ${bc}">${pos}</span>${t.name}</td><td class="pts-cell">${t.pts}</td><td>${t.g}</td><td>${t.gf}</td><td>${t.gs}</td>`;
+      tbody.appendChild(row);
     });
+  });
 
-    function risolvi(testo) {
-      const match = testo.match(/(\d)ª Girone ([A-F])/);
-      if (!match) return null;
-      const pos = parseInt(match[1]) - 1;
-      const lettera = match[2];
-      if (!gironiCompleti[lettera]) return null;
-      // 🔑 usa direttamente la classifica già ordinata con scontro diretto
-      if (!classificheOrdinate[lettera] || !classificheOrdinate[lettera][pos]) return null;
-      return classificheOrdinate[lettera][pos].name;
-    }
+  return classifiche;
+}
 
-    document.querySelectorAll('.playoff-matchup, .finals-matchup').forEach(el => {
-      if (!el.dataset.original) {
-        el.dataset.original = el.textContent.trim();
-      }
+// ==================== POPOLA PLAYOFF E FINALI ====================
+function popolaFasi(classifiche) {
+  // Controlla gironi completi
+  const completi = {};
+  document.querySelectorAll('.matches-group').forEach(groupEl => {
+    const letter = groupEl.querySelector('.standings-title').textContent.replace('Girone ','').trim();
+    const tutte = groupEl.querySelectorAll('.match-card');
+    const giocate = Array.from(tutte).filter(m => {
+      const s = m.querySelector('.match-score');
+      return s && !s.classList.contains('pending') && !s.classList.contains('rinv') && s.textContent.includes('-');
     });
+    completi[letter] = giocate.length === tutte.length;
+  });
 
-    document.querySelectorAll('.playoff-matchup').forEach(el => {
-      const parti = el.dataset.original.split('—').map(s => s.trim());
-      if (parti.length !== 2) return;
-
-      const r1 = risolvi(parti[0]);
-      const r2 = risolvi(parti[1]);
-
-      const t1 = r1 ? `<strong>${r1}</strong>` : `<span style="opacity:0.55">${parti[0]}</span>`;
-      const t2 = r2 ? `<strong>${r2}</strong>` : `<span style="opacity:0.55">${parti[1]}</span>`;
-
-      el.innerHTML = `${t1} — ${t2}`;
-    });
-
-    document.querySelectorAll('.finals-matchup').forEach(el => {
-      const parti = el.dataset.original.split('—').map(s => s.trim());
-      if (parti.length !== 2) return;
-
-      const r1 = risolvi(parti[0]);
-      const t1 = r1 ? `<strong>${r1}</strong>` : `<span style="opacity:0.55">${parti[0]}</span>`;
-      const t2 = `<span style="opacity:0.55">${parti[1]}</span>`;
-
-      el.innerHTML = `${t1} — ${t2}`;
-    });
+  // Risolve "Nª Girone X" → nome reale se disponibile
+  function risolvi(testo) {
+    const m = testo.match(/(\d)ª Girone ([A-F])/);
+    if (!m) return null;
+    const pos = parseInt(m[1])-1;
+    const letter = m[2];
+    if (!completi[letter]) return null;
+    return classifiche[letter] && classifiche[letter][pos] ? classifiche[letter][pos].name : null;
   }
 
-  // ==================== FUNZIONE TABS ====================
-  function showTab(id) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  // Popola playoff
+  document.querySelectorAll('.playoff-match').forEach(row => {
+    const homeLabel = row.dataset.home;
+    const awayLabel = row.dataset.away;
+    const homeEl = row.querySelector('.match-team.home');
+    const awayEl = row.querySelector('.match-team.away');
+    if (!homeEl || !awayEl) return;
+    const homeNome = risolvi(homeLabel);
+    const awayNome = risolvi(awayLabel);
+    homeEl.textContent = homeNome || homeLabel;
+    awayEl.textContent = awayNome || awayLabel;
+    homeEl.style.opacity = homeNome ? '1' : '0.55';
+    awayEl.style.opacity = awayNome ? '1' : '0.55';
+  });
 
-    const section = document.getElementById(id);
-    if (section) section.classList.add('active');
+  // Popola finali
+  document.querySelectorAll('.finals-match').forEach(row => {
+    const homeLabel = row.dataset.home;
+    const awayLabel = row.dataset.away;
+    const homeEl = row.querySelector('.match-team.home');
+    const awayEl = row.querySelector('.match-team.away');
+    if (!homeEl || !awayEl) return;
+    const homeNome = risolvi(homeLabel);
+    homeEl.textContent = homeNome || homeLabel;
+    homeEl.style.opacity = homeNome ? '1' : '0.55';
+    awayEl.textContent = awayLabel;
+    awayEl.style.opacity = '0.55';
+  });
+}
 
-    const activeTab = Array.from(document.querySelectorAll('.tab')).find(t =>
-      t.getAttribute('onclick').includes(`'${id}'`)
-    );
-    if (activeTab) activeTab.classList.add('active');
-
-    if (id === 'classifica' || id === 'playoff') {
-      const classificheOrdinate = calculateStandings();
-      popolaFasiFinali(classificheOrdinate);
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// ==================== TABS ====================
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  const section = document.getElementById(id);
+  if (section) section.classList.add('active');
+  const activeTab = Array.from(document.querySelectorAll('.tab')).find(t => t.getAttribute('onclick').includes(`'${id}'`));
+  if (activeTab) activeTab.classList.add('active');
+  if (id === 'classifica' || id === 'playoff') {
+    const cl = calculateStandings();
+    popolaFasi(cl);
   }
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
 
-  // ==================== INIT ====================
-  window.onload = () => {
-    const classificheOrdinate = calculateStandings();
-    popolaFasiFinali(classificheOrdinate);
-  };
-
+// ==================== INIT ====================
+window.onload = () => {
+  const cl = calculateStandings();
+  popolaFasi(cl);
+};
 </script>
 </body>
 </html>
